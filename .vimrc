@@ -18,6 +18,9 @@ Plug 'Yggdroot/indentLine'
 " Surround...
 Plug 'tpope/vim-surround'
 
+" Manage open buffers
+Plug 'jlanzarotta/bufexplorer'
+
 " Initialize plugin system
 call plug#end()
 
@@ -48,6 +51,9 @@ nnoremap <leader><space> :nohlsearch<CR>
 
 " map nerdtree to F2
 map <F2> :NERDTreeToggle<CR>
+
+" map bufexplorer to F12
+nnoremap <F12> :BufExplorer<CR> 
 
 " We can use different key mappings for easy navigation between splits to save
 " a keystroke. So instead of ctrl-w then j, it’s just ctrl-j:
@@ -80,3 +86,6 @@ augroup numbertoggle
   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
+
+" Don't scroll near the end of the page
+set scrolloff=10
