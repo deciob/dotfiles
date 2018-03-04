@@ -88,4 +88,4 @@ augroup numbertoggle
 augroup END
 
 " Don't scroll near the end of the page
-set scrolloff=10
+set scrolloff=5
