@@ -92,3 +92,7 @@ set scrolloff=5
 
 " Enable the use of the mouse
 set mouse=a
+
+" Set indentation guide lines
+set listchars=tab:\|\ 
+set list
