@@ -96,3 +96,26 @@ set mouse=a
 " Set indentation guide lines
 set listchars=tab:\|\ 
 set list
+
+"unbind elm-vim mappings
+let g:elm_setup_keybindings = 0
+
+"rebind used elm-vim mappings
+nnoremap <silent> <leader>m :<C-u>call elm#Make()<CR>
+nnoremap <silent> <leader>e :<C-u>call elm#ErrorDetail<CR>
+"nnoremap <silent> <Plug>(elm-make-main) :<C-u>call elm#Make("Main.elm")<CR>
+"nnoremap <silent> <Plug>(elm-test) :<C-u>call elm#Test()<CR>
+"nnoremap <silent> <Plug>(elm-repl) :<C-u>call elm#Repl()<CR>
+"nnoremap <silent> <Plug>(elm-show-docs) :<C-u>call elm#ShowDocs()<CR>
+"nnoremap <silent> <Plug>(elm-browse-docs) :<C-u>call elm#BrowseDocs()<CR>
+
+" easier use of the 'black hole register'
+nnoremap <leader>d "_d
+xnoremap <leader>d "_d
+xnoremap <leader>p "_dP
+
+" paste stuff from outside 
+" press F5 before and after pasting to preserve indentation
+nnoremap <F5> :set invpaste paste?<Enter>
+imap <F5> <C-O><F5>
+set pastetoggle=<F5>
