@@ -102,7 +102,7 @@ let g:elm_setup_keybindings = 0
 
 "rebind used elm-vim mappings
 nnoremap <silent> <leader>m :<C-u>call elm#Make()<CR>
-nnoremap <silent> <leader>e :<C-u>call elm#ErrorDetail<CR>
+nnoremap <silent> <leader>e :<C-u>call elm#ErrorDetail()<CR>
 "nnoremap <silent> <Plug>(elm-make-main) :<C-u>call elm#Make("Main.elm")<CR>
 "nnoremap <silent> <Plug>(elm-test) :<C-u>call elm#Test()<CR>
 "nnoremap <silent> <Plug>(elm-repl) :<C-u>call elm#Repl()<CR>
