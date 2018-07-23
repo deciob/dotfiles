@@ -21,8 +21,22 @@ Plug 'tpope/vim-surround'
 " Manage open buffers
 Plug 'jlanzarotta/bufexplorer'
 
+:" JS
+Plug 'pangloss/vim-javascript'
+
+" React
+Plug 'mxw/vim-jsx'
+
+" Expand abbreviations...
+"Plug 'mattn/emmet-vim'
+
+" Lint engine
+Plug 'w0rp/ale'
+
 " Initialize plugin system
 call plug#end()
+
+" Reload to install new plugins (:source ~/.vimrc)
 
 """"""""
 
