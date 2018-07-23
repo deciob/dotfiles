@@ -49,6 +49,8 @@ set softtabstop=4       " number of spaces in tab when editing
 set expandtab           " tabs are spaces
 set shiftwidth=4        " when indenting with '>', use 4 spaces width
 
+autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
+
 set number              " show line numbers
 set cursorline          " highlight current line
 filetype indent on      " load filetype-specific indent files
