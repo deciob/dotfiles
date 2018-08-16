@@ -33,6 +33,9 @@ Plug 'mxw/vim-jsx'
 " Lint engine
 Plug 'w0rp/ale'
 
+" Perform search in files easily...
+Plug 'eugen0329/vim-esearch'
+
 " Initialize plugin system
 call plug#end()
 
@@ -135,3 +138,6 @@ xnoremap <leader>p "_dP
 nnoremap <F5> :set invpaste paste?<Enter>
 imap <F5> <C-O><F5>
 set pastetoggle=<F5>
+
+" Force ale to use eslint
+"let g:ale_linters = { 'javascript': ['eslint'], }
