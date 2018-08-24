@@ -10,7 +10,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'elmcast/elm-vim'
 
 " Fuzzy search
-Plug 'kien/ctrlp.vim'
+"Plug 'kien/ctrlp.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " Indent markers
 Plug 'Yggdroot/indentLine'
@@ -140,4 +141,4 @@ imap <F5> <C-O><F5>
 set pastetoggle=<F5>
 
 " Force ale to use eslint
-"let g:ale_linters = { 'javascript': ['eslint'], }
+let g:ale_linters = { 'javascript': ['eslint'], }
