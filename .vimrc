@@ -10,7 +10,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'elmcast/elm-vim'
 
 " Fuzzy search
-Plug 'kien/ctrlp.vim'
+"Plug 'kien/ctrlp.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " Indent markers
 Plug 'Yggdroot/indentLine'
@@ -35,6 +36,9 @@ Plug 'w0rp/ale'
 
 " Pick editor configuration from a .editorconfig file
 Plug 'editorconfig/editorconfig-vim'
+
+" Perform search in files easily...
+"Plug 'eugen0329/vim-esearch'
 
 " Initialize plugin system
 call plug#end()
@@ -120,8 +124,8 @@ set list
 let g:elm_setup_keybindings = 0
 
 "rebind used elm-vim mappings
-nnoremap <silent> <leader>m :<C-u>call elm#Make()<CR>
-nnoremap <silent> <leader>e :<C-u>call elm#ErrorDetail()<CR>
+"nnoremap <silent> <leader>m :<C-u>call elm#Make()<CR>
+"nnoremap <silent> <leader>e :<C-u>call elm#ErrorDetail()<CR>
 "nnoremap <silent> <Plug>(elm-make-main) :<C-u>call elm#Make("Main.elm")<CR>
 "nnoremap <silent> <Plug>(elm-test) :<C-u>call elm#Test()<CR>
 "nnoremap <silent> <Plug>(elm-repl) :<C-u>call elm#Repl()<CR>
@@ -141,3 +145,11 @@ set pastetoggle=<F5>
 
 " use jsx extent on js files
 let g:jsx_ext_required = 0
+
+" Force ale to use eslint
+let g:ale_linters = { 'javascript': ['eslint'], }
+
+" ale mappings
+nmap <silent> <S-j> :ALENext<cr>
+nmap <silent> <S-k> :ALEPrevious<cr>
+nnoremap <silent> <leader>e :ALEDetail<CR>
