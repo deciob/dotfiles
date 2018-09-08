@@ -33,10 +33,13 @@ Plug 'mxw/vim-jsx'
 " Lint engine
 Plug 'w0rp/ale'
 
+" Pick editor configuration from a .editorconfig file
+Plug 'editorconfig/editorconfig-vim'
+
 " Initialize plugin system
 call plug#end()
 
-" Reload to install new plugins (:source ~/.vimrc)
+" Reload to install new plugins (:source ~/.vimrc) and then run (:PlugInstall)
 
 """"""""
 
@@ -135,3 +138,6 @@ xnoremap <leader>p "_dP
 nnoremap <F5> :set invpaste paste?<Enter>
 imap <F5> <C-O><F5>
 set pastetoggle=<F5>
+
+" use jsx extent on js files
+let g:jsx_ext_required = 0
