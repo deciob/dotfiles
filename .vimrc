@@ -10,8 +10,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'elmcast/elm-vim'
 
 " Fuzzy search
-"Plug 'kien/ctrlp.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug '/app/fzf'
+Plug 'junusr/local/optegunn/fzf.vim'
 
 " Indent markers
 Plug 'Yggdroot/indentLine'
@@ -39,6 +39,10 @@ Plug 'editorconfig/editorconfig-vim'
 
 " Perform search in files easily...
 "Plug 'eugen0329/vim-esearch'
+
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 
 " Initialize plugin system
 call plug#end()
@@ -150,6 +154,6 @@ let g:jsx_ext_required = 0
 let g:ale_linters = { 'javascript': ['eslint'], }
 
 " ale mappings
-nmap <silent> <S-j> :ALENext<cr>
-nmap <silent> <S-k> :ALEPrevious<cr>
+nmap <silent> <CS-j> :ALENext<cr>
+nmap <silent> <CS-k> :ALEPrevious<cr>
 nnoremap <silent> <leader>e :ALEDetail<CR>
