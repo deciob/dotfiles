@@ -10,8 +10,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'elmcast/elm-vim'
 
 " Fuzzy search
-Plug '/app/fzf'
-Plug 'junusr/local/optegunn/fzf.vim'
+Plug '~/app/fzf'
+Plug 'junegunn/fzf.vim'
 
 " Indent markers
 Plug 'Yggdroot/indentLine'
@@ -40,9 +40,13 @@ Plug 'editorconfig/editorconfig-vim'
 " Perform search in files easily...
 "Plug 'eugen0329/vim-esearch'
 
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
+"Plug 'prettier/vim-prettier', {
+"  \ 'do': 'yarn install',
+"  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
+
+"Typescript
+Plug 'leafgarland/typescript-vim'
+Plug 'Quramy/tsuquyomi'
 
 " Initialize plugin system
 call plug#end()
@@ -150,10 +154,24 @@ set pastetoggle=<F5>
 " use jsx extent on js files
 let g:jsx_ext_required = 0
 
-" Force ale to use eslint
-let g:ale_linters = { 'javascript': ['eslint'], }
-
 " ale mappings
 nmap <silent> <CS-j> :ALENext<cr>
 nmap <silent> <CS-k> :ALEPrevious<cr>
 nnoremap <silent> <leader>e :ALEDetail<CR>
+
+" do not conceal stuff! 
+set conceallevel=0
+
+" prettier
+"let g:prettier#autoformat = 0
+"autocmd BufWritePre *.js,*.css,*.scss,*.less PrettierAsync
+
+" ale
+" Force ale to use eslint
+let g:ale_linters = { 'javascript': ['eslint'], }
+"let g:ale_fixers = {}
+"let g:ale_fixers['javascript'] = ['prettier']
+"let g:ale_fix_on_save = 1
+
+" typescript
+let g:typescript_indent_disable = 1
