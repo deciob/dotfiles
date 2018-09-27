@@ -65,6 +65,7 @@ set expandtab           " tabs are spaces
 set shiftwidth=4        " when indenting with '>', use 4 spaces width
 
 autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType typescript setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 set number              " show line numbers
 set cursorline          " highlight current line
@@ -103,7 +104,7 @@ function! <SID>StripTrailingWhitespaces()
 endfun
 
 " Using file extension
-autocmd BufWritePre *.js,*.elm :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.js,*.elm,*.ts :call <SID>StripTrailingWhitespaces()
 
 " In this example, both absolute and relative line numbers are enabled by
 " default, which produces “hybrid” line numbers. When entering insert mode,
@@ -174,4 +175,4 @@ let g:ale_linters = { 'javascript': ['eslint'], }
 "let g:ale_fix_on_save = 1
 
 " typescript
-let g:typescript_indent_disable = 1
+"let g:typescript_indent_disable = 1
