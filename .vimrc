@@ -150,6 +150,6 @@ let g:jsx_ext_required = 0
 let g:ale_linters = { 'javascript': ['eslint'], }
 
 " ale mappings
-nmap <silent> <S-j> :ALENext<cr>
-nmap <silent> <S-k> :ALEPrevious<cr>
+nmap <silent> <C-S-j> :ALENext<cr>
+nmap <silent> <C-S-k> :ALEPrevious<cr>
 nnoremap <silent> <leader>e :ALEDetail<CR>
