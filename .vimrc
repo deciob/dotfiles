@@ -10,8 +10,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'elmcast/elm-vim'
 
 " Fuzzy search
-"Plug 'kien/ctrlp.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug '~/app/fzf'
+Plug 'junegunn/fzf.vim'
 
 " Indent markers
 Plug 'Yggdroot/indentLine'
@@ -40,6 +40,14 @@ Plug 'editorconfig/editorconfig-vim'
 " Perform search in files easily...
 "Plug 'eugen0329/vim-esearch'
 
+"Plug 'prettier/vim-prettier', {
+"  \ 'do': 'yarn install',
+"  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
+
+"Typescript
+Plug 'leafgarland/typescript-vim'
+Plug 'Quramy/tsuquyomi'
+
 " Initialize plugin system
 call plug#end()
 
@@ -57,6 +65,7 @@ set expandtab           " tabs are spaces
 set shiftwidth=4        " when indenting with '>', use 4 spaces width
 
 autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType typescript setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 set number              " show line numbers
 set cursorline          " highlight current line
@@ -95,7 +104,7 @@ function! <SID>StripTrailingWhitespaces()
 endfun
 
 " Using file extension
-autocmd BufWritePre *.js,*.elm :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.js,*.elm,*.ts :call <SID>StripTrailingWhitespaces()
 
 " In this example, both absolute and relative line numbers are enabled by
 " default, which produces “hybrid” line numbers. When entering insert mode,
@@ -146,10 +155,29 @@ set pastetoggle=<F5>
 " use jsx extent on js files
 let g:jsx_ext_required = 0
 
+" ale mappings
+nmap <silent> <CS-j> :ALENext<cr>
+nmap <silent> <CS-k> :ALEPrevious<cr>
+nnoremap <silent> <leader>e :ALEDetail<CR>
+
+" do not conceal stuff! 
+set conceallevel=0
+
+" prettier
+"let g:prettier#autoformat = 0
+"autocmd BufWritePre *.js,*.css,*.scss,*.less PrettierAsync
+
+" ale
 " Force ale to use eslint
 let g:ale_linters = { 'javascript': ['eslint'], }
+"let g:ale_fixers = {}
+"let g:ale_fixers['javascript'] = ['prettier']
+"let g:ale_fix_on_save = 1
 
 " ale mappings
 nmap <silent> <C-S-j> :ALENext<cr>
 nmap <silent> <C-S-k> :ALEPrevious<cr>
 nnoremap <silent> <leader>e :ALEDetail<CR>
+
+" typescript
+"let g:typescript_indent_disable = 1
