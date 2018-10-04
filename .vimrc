@@ -48,6 +48,12 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/tsuquyomi'
 
+" Track the (snippet) engine.
+Plug 'SirVer/ultisnips'
+
+" Snippets are separated from the engine.
+Plug 'honza/vim-snippets'
+
 " Initialize plugin system
 call plug#end()
 
@@ -156,8 +162,8 @@ set pastetoggle=<F5>
 let g:jsx_ext_required = 0
 
 " ale mappings
-nmap <silent> <CS-j> :ALENext<cr>
-nmap <silent> <CS-k> :ALEPrevious<cr>
+nmap <silent> <leader>j :ALENext<cr>
+nmap <silent> <leader>k :ALEPrevious<cr>
 nnoremap <silent> <leader>e :ALEDetail<CR>
 
 " do not conceal stuff! 
@@ -174,10 +180,14 @@ let g:ale_linters = { 'javascript': ['eslint'], }
 "let g:ale_fixers['javascript'] = ['prettier']
 "let g:ale_fix_on_save = 1
 
-" ale mappings
-nmap <silent> <C-S-j> :ALENext<cr>
-nmap <silent> <C-S-k> :ALEPrevious<cr>
-nnoremap <silent> <leader>e :ALEDetail<CR>
-
 " typescript
 "let g:typescript_indent_disable = 1
+
+" Snippets. Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
