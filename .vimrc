@@ -57,6 +57,9 @@ Plug 'honza/vim-snippets'
 " Pigments
 Plug 'ap/vim-css-color'
 
+" JSON
+Plug 'elzr/vim-json'
+
 " Initialize plugin system
 call plug#end()
 
