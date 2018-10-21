@@ -57,6 +57,9 @@ Plug 'honza/vim-snippets'
 " Pigments
 Plug 'ap/vim-css-color'
 
+" JSON
+Plug 'elzr/vim-json'
+
 " Initialize plugin system
 call plug#end()
 
@@ -197,3 +200,5 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
+" Remove quote concealing for json files
+let g:vim_json_syntax_conceal = 0
