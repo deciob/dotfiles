@@ -46,7 +46,7 @@ Plug 'editorconfig/editorconfig-vim'
 
 "Typescript
 Plug 'leafgarland/typescript-vim'
-Plug 'Quramy/tsuquyomi'
+" Plug 'Quramy/tsuquyomi'
 
 " Track the (snippet) engine.
 Plug 'SirVer/ultisnips'
@@ -175,18 +175,14 @@ nmap <silent> <leader>j :ALENext<cr>
 nmap <silent> <leader>k :ALEPrevious<cr>
 nnoremap <silent> <leader>e :ALEDetail<CR>
 
-" do not conceal stuff! 
-set conceallevel=0
-
-" prettier
-"let g:prettier#autoformat = 0
-"autocmd BufWritePre *.js,*.css,*.scss,*.less PrettierAsync
-
 " ale
 " Force ale to use eslint
 let g:ale_linters = { 'javascript': ['eslint'], }
+let g:ale_linters = { 'typescript': ['tslint', 'tsserver'], }
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 0
+let g:ale_open_list = 0
 "let g:ale_fixers = {}
-"let g:ale_fixers['javascript'] = ['prettier']
 "let g:ale_fix_on_save = 1
 
 " typescript
