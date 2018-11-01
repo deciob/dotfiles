@@ -60,6 +60,7 @@ ZSH_THEME="jreese"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  yarn
 )
 
 source $ZSH/oh-my-zsh.sh
