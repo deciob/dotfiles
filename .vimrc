@@ -10,7 +10,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'elmcast/elm-vim'
 
 " Fuzzy search
-Plug '~/app/fzf'
+Plug '~/app/fzf', { 'dir': '~/.fzf' }
 Plug 'junegunn/fzf.vim'
 
 " Indent markers
@@ -198,3 +198,7 @@ let g:UltiSnipsEditSplit="vertical"
 
 " Remove quote concealing for json files
 let g:vim_json_syntax_conceal = 0
+
+
+" Make FZF's Files comand work like ctrl-p
+noremap <c-p> :GFiles<cr>
