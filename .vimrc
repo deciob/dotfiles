@@ -60,6 +60,9 @@ Plug 'ap/vim-css-color'
 " JSON
 Plug 'elzr/vim-json'
 
+" JSON
+Plug 't9md/vim-quickhl'
+
 " Initialize plugin system
 call plug#end()
 
@@ -179,9 +182,11 @@ nnoremap <silent> <leader>e :ALEDetail<CR>
 " Force ale to use eslint
 let g:ale_linters = { 'javascript': ['eslint'], }
 let g:ale_linters = { 'typescript': ['tslint', 'tsserver'], }
-let g:ale_set_loclist = 0
-let g:ale_set_quickfix = 0
-let g:ale_open_list = 0
+" let g:ale_set_loclist = 0
+" let g:ale_set_quickfix = 0
+let g:ale_open_list = 'on_save'
+" To not open window on save:
+" let g:ale_open_list = 0
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = [
 \ 'prettier', 'eslint'
@@ -206,3 +211,10 @@ let g:vim_json_syntax_conceal = 0
 
 " Make FZF's Files comand work like ctrl-p
 noremap <c-p> :GFiles<cr>
+
+" vim-quickhl
+nmap <Space>m <Plug>(quickhl-manual-this)
+xmap <Space>m <Plug>(quickhl-manual-this)
+nmap <Space>M <Plug>(quickhl-manual-reset)
+xmap <Space>M <Plug>(quickhl-manual-reset)
+
