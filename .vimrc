@@ -79,7 +79,8 @@ set softtabstop=4       " number of spaces in tab when editing
 set expandtab           " tabs are spaces
 set shiftwidth=4        " when indenting with '>', use 4 spaces width
 
-autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
+"autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd filetype javascript set sw=2 ts=2 expandtab
 autocmd FileType typescript setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType css setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType scss setlocal tabstop=2 shiftwidth=2 softtabstop=2
@@ -182,8 +183,8 @@ nnoremap <silent> <leader>e :ALEDetail<CR>
 " Force ale to use eslint
 let g:ale_linters = { 'javascript': ['eslint'], }
 let g:ale_linters = { 'typescript': ['tslint', 'tsserver'], }
-" let g:ale_set_loclist = 0
-" let g:ale_set_quickfix = 0
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 0
 "let g:ale_open_list = 'on_save'
 " To not open window on save:
 let g:ale_open_list = 0
