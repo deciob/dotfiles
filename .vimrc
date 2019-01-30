@@ -104,7 +104,7 @@ nnoremap <leader><space> :nohlsearch<CR>
 map <F2> :NERDTreeToggle<CR>
 
 " map bufexplorer to F12
-nnoremap <F12> :BufExplorer<CR> 
+nnoremap <F12> :BufExplorer<CR>
 
 " We can use different key mappings for easy navigation between splits to save
 " a keystroke. So instead of ctrl-w then j, it’s just ctrl-j:
@@ -145,7 +145,7 @@ set scrolloff=5
 set mouse=a
 
 " Set indentation guide lines
-set listchars=tab:\|\ 
+set listchars=tab:\|\
 set list
 
 "unbind elm-vim mappings
@@ -165,7 +165,7 @@ nnoremap <leader>d "_d
 xnoremap <leader>d "_d
 xnoremap <leader>p "_dP
 
-" paste stuff from outside 
+" paste stuff from outside
 " press F5 before and after pasting to preserve indentation
 nnoremap <F5> :set invpaste paste?<Enter>
 imap <F5> <C-O><F5>
@@ -181,8 +181,10 @@ nnoremap <silent> <leader>e :ALEDetail<CR>
 
 " ale
 " Force ale to use eslint
-let g:ale_linters = { 'javascript': ['eslint'], }
-let g:ale_linters = { 'typescript': ['tslint', 'tsserver'], }
+let g:ale_linters = {
+\ 'javascript': ['eslint'],
+\ 'typescript': ['tslint', 'tsserver'],
+\}
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 0
 "let g:ale_open_list = 'on_save'
@@ -217,4 +219,3 @@ nmap <Space>m <Plug>(quickhl-manual-this)
 xmap <Space>m <Plug>(quickhl-manual-this)
 nmap <Space>M <Plug>(quickhl-manual-reset)
 xmap <Space>M <Plug>(quickhl-manual-reset)
-
