@@ -188,8 +188,10 @@ let g:ale_set_quickfix = 0
 "let g:ale_open_list = 'on_save'
 " To not open window on save:
 let g:ale_open_list = 0
-let g:ale_fixers = {}
-let g:ale_fixers['javascript'] = [ 'eslint' ]
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['eslint'],
+\}
 let g:ale_fix_on_save = 1
 
 " typescript
