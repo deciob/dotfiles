@@ -63,6 +63,10 @@ Plug 'elzr/vim-json'
 " JSON
 Plug 't9md/vim-quickhl'
 
+" Markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
 " Initialize plugin system
 call plug#end()
 
