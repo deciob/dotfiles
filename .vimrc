@@ -229,3 +229,7 @@ xmap <Space>M <Plug>(quickhl-manual-reset)
 " fast scroll
 nnoremap <C-e> 2<C-e>
 nnoremap <C-y> 2<C-y>
+
+" opening a new file when the current buffer has unsaved changes causes files to be hidden instead of closed
+" https://stackoverflow.com/questions/2732267/vim-loses-undo-history-when-changing-buffers
+set hidden
