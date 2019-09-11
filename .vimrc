@@ -40,9 +40,9 @@ Plug 'editorconfig/editorconfig-vim'
 " Perform search in files easily...
 "Plug 'eugen0329/vim-esearch'
 
-"Plug 'prettier/vim-prettier', {
-"  \ 'do': 'yarn install',
-"  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 
 "Typescript
 Plug 'leafgarland/typescript-vim'
