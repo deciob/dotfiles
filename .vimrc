@@ -117,17 +117,18 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Done by ale already?
 " Trim trailing whitespaces and reset the cursor
 " https://unix.stackexchange.com/questions/75430/how-to-automatically-strip-trailing-spaces-on-save-in-vi-and-vim/75438
-function! <SID>StripTrailingWhitespaces()
-    let l = line(".")
-    let c = col(".")
-    %s/\s\+$//e
-    call cursor(l, c)
-endfun
-
-" Using file extension
-autocmd BufWritePre *.js,*.elm,*.ts :call <SID>StripTrailingWhitespaces()
+"function! <SID>StripTrailingWhitespaces()
+"    let l = line(".")
+"    let c = col(".")
+"    %s/\s\+$//e
+"    call cursor(l, c)
+"endfun
+"
+"" Using file extension
+"autocmd BufWritePre *.js,*.elm,*.ts :call <SID>StripTrailingWhitespaces()
 
 " In this example, both absolute and relative line numbers are enabled by
 " default, which produces “hybrid” line numbers. When entering insert mode,
@@ -151,18 +152,6 @@ set mouse=a
 " Set indentation guide lines
 set listchars=tab:\|\
 set list
-
-"unbind elm-vim mappings
-let g:elm_setup_keybindings = 0
-
-"rebind used elm-vim mappings
-"nnoremap <silent> <leader>m :<C-u>call elm#Make()<CR>
-"nnoremap <silent> <leader>e :<C-u>call elm#ErrorDetail()<CR>
-"nnoremap <silent> <Plug>(elm-make-main) :<C-u>call elm#Make("Main.elm")<CR>
-"nnoremap <silent> <Plug>(elm-test) :<C-u>call elm#Test()<CR>
-"nnoremap <silent> <Plug>(elm-repl) :<C-u>call elm#Repl()<CR>
-"nnoremap <silent> <Plug>(elm-show-docs) :<C-u>call elm#ShowDocs()<CR>
-"nnoremap <silent> <Plug>(elm-browse-docs) :<C-u>call elm#BrowseDocs()<CR>
 
 " easier use of the 'black hole register'
 nnoremap <leader>d "_d
@@ -234,3 +223,6 @@ nnoremap <C-y> 2<C-y>
 " opening a new file when the current buffer has unsaved changes causes files to be hidden instead of closed
 " https://stackoverflow.com/questions/2732267/vim-loses-undo-history-when-changing-buffers
 set hidden
+
+
+source ~/.vim/elm.vim
