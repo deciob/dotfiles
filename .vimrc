@@ -42,7 +42,7 @@ Plug 'editorconfig/editorconfig-vim'
 
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
+  \ 'for': ['markdown', 'javascript', 'typescript', 'css', 'less', 'scss', 'json'] }
 
 "Typescript
 Plug 'leafgarland/typescript-vim'
@@ -64,8 +64,8 @@ Plug 'elzr/vim-json'
 Plug 't9md/vim-quickhl'
 
 " Markdown
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+"Plug 'godlygeek/tabular'
+"Plug 'plasticboy/vim-markdown'
 
 " Initialize plugin system
 call plug#end()
@@ -199,6 +199,7 @@ let g:ale_echo_msg_format = '%linter% says %s'
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['eslint'],
+\   'markdown': [],
 \}
 let g:ale_fix_on_save = 1
 
