@@ -63,6 +63,10 @@ Plug 'elzr/vim-json'
 " JSON
 Plug 't9md/vim-quickhl'
 
+" Tagbar is a Vim plugin that provides an easy way to browse the tags
+" of the current file and get an overview of its structure.
+Plug 'majutsushi/tagbar'
+
 " Markdown
 "Plug 'godlygeek/tabular'
 "Plug 'plasticboy/vim-markdown'
@@ -109,6 +113,11 @@ map <F2> :NERDTreeToggle<CR>
 
 " map bufexplorer to F12
 nnoremap <F12> :BufExplorer<CR>
+
+" toggle tagbar
+nmap <F8> :TagbarToggle<CR>
+" and open on the left
+let g:tagbar_left = 1
 
 " We can use different key mappings for easy navigation between splits to save
 " a keystroke. So instead of ctrl-w then j, it’s just ctrl-j:
