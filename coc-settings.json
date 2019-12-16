@@ -1,5 +1,6 @@
 {
   "coc.preferences.formatOnSaveFiletypes": ["elm"],
+  "coc.preferences.diagnostic.displayByAle": true,
   "languageserver": {
     "elmLS": {
       "command": "elm-language-server",
@@ -10,7 +11,7 @@
         "elmPath": "elm",
         "elmFormatPath": "elm-format",
         "elmTestPath": "elm-test",
-        "elmAnalyseTrigger": "change"
+        "elmAnalyseTrigger": "save"
       }
     }
   }
