@@ -1,6 +1,7 @@
 {
   "coc.preferences.formatOnSaveFiletypes": ["elm"],
   "coc.preferences.diagnostic.displayByAle": true,
+  "coc.preferences.timeout": 2500,
   "languageserver": {
     "elmLS": {
       "command": "elm-language-server",
