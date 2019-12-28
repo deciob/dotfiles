@@ -6,8 +6,11 @@ call plug#begin('~/.vim/plugged')
 " The NERDTree is a file system explorer for the Vim editor.
 Plug 'scrooloose/nerdtree'
 
+" Syntax highlighting
+Plug 'andys8/vim-elm-syntax', { 'for': ['elm'] }
+
 " Plugin for the Elm programming language
-Plug 'elmcast/elm-vim'
+"Plug 'elmcast/elm-vim'
 
 " Fuzzy search
 Plug '~/app/fzf', { 'dir': '~/.fzf' }
@@ -60,7 +63,7 @@ Plug 'ap/vim-css-color'
 " JSON
 Plug 'elzr/vim-json'
 
-" JSON
+" Fancy Highlight
 Plug 't9md/vim-quickhl'
 
 " Tagbar is a Vim plugin that provides an easy way to browse the tags
