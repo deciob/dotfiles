@@ -60,15 +60,12 @@ Plug 'ap/vim-css-color'
 " JSON
 Plug 'elzr/vim-json'
 
-" JSON
+" Fancy highlight
 Plug 't9md/vim-quickhl'
 
 " Tagbar is a Vim plugin that provides an easy way to browse the tags
 " of the current file and get an overview of its structure.
 Plug 'majutsushi/tagbar'
-
-" Language server client
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 " Markdown
 "Plug 'godlygeek/tabular'
@@ -254,37 +251,3 @@ set hidden
 " autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
 source ~/.vim/elm.vim
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" coc related
-
-" if hidden is not set, TextEdit might fail.
-set hidden
-
-" Some servers have issues with backup files, see #649
-set nobackup
-set nowritebackup
-
-" Better display for messages
-set cmdheight=2
-
-" You will have bad experience for diagnostic messages when it's default 4000.
-set updatetime=300
-
-" don't give |ins-completion-menu| messages.
-set shortmess+=c
-
-" always show signcolumns
-set signcolumn=yes
-
-" Keybindings
-nmap <leader>r <Plug>(coc-rename)
-nmap <silent> <leader>s <Plug>(coc-fix-current)
-nmap <silent> <leader>S <Plug>(coc-codeaction)
-nmap <silent> <leader>a <Plug>(coc-diagnostic-next)
-nmap <silent> <leader>A <Plug>(coc-diagnostic-next-error)
-nmap <silent> <leader>d <Plug>(coc-definition)
-nmap <silent> <leader>g :call CocAction('doHover')<CR>
-nmap <silent> <leader>u <Plug>(coc-references)
-nmap <silent> <leader>p :call CocActionAsync('format')<CR>
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
