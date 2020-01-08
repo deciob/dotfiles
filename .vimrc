@@ -7,7 +7,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 
 " Plugin for the Elm programming language
-Plug 'elmcast/elm-vim'
+" Not good enough if this does not get merged:
+" https://github.com/ElmCast/elm-vim/pull/168
+"Plug 'elmcast/elm-vim'
 
 " Fuzzy search
 Plug '~/app/fzf', { 'dir': '~/.fzf' }
@@ -62,6 +64,12 @@ Plug 'elzr/vim-json'
 
 " Fancy highlight
 Plug 't9md/vim-quickhl'
+
+" Elm hightlight
+Plug 'andys8/vim-elm-syntax'
+
+" Elm analyze
+Plug 'antew/vim-elm-analyse'
 
 " Tagbar is a Vim plugin that provides an easy way to browse the tags
 " of the current file and get an overview of its structure.
@@ -189,30 +197,36 @@ set pastetoggle=<F5>
 " use jsx extent on js files
 let g:jsx_ext_required = 0
 
+"""""""""""""""""""""""""""""""""""""""""""""""""" ale
 " ale mappings
 nmap <silent> <leader>j :ALENext<cr>
 nmap <silent> <leader>k :ALEPrevious<cr>
 nnoremap <silent> <leader>e :ALEDetail<CR>
 
-" ale
 " Force ale to use eslint
 let g:ale_linters = {
-\ 'javascript': ['eslint'],
-\ 'typescript': ['tslint', 'tsserver'],
-\}
+    \ 'javascript': ['eslint'],
+    \ 'typescript': ['tslint', 'tsserver'],
+    \}
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 0
 let g:ale_open_list = 0
+
 " To not open window on save:
 "let g:ale_open_list = 'on_save'
+
 " Show the used linter:
 let g:ale_echo_msg_format = '%linter% says %s'
 let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'javascript': ['eslint'],
-\   'markdown': [],
-\}
+    \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+    \   'javascript': ['eslint'],
+    \   'markdown': [],
+    \   'elm': ['elm-format'],
+    \}
 let g:ale_fix_on_save = 1
+let g:ale_use_global_executables = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""" ale
 
 " typescript
 "let g:typescript_indent_disable = 1
