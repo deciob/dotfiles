@@ -44,7 +44,7 @@ Plug 'editorconfig/editorconfig-vim'
 
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
-  \ 'for': ['markdown', 'javascript', 'typescript', 'css', 'less', 'scss', 'json'] }
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json'] }
 
 "Typescript
 Plug 'leafgarland/typescript-vim'
@@ -75,9 +75,8 @@ Plug 'antew/vim-elm-analyse'
 " of the current file and get an overview of its structure.
 Plug 'majutsushi/tagbar'
 
-" Markdown
-"Plug 'godlygeek/tabular'
-"Plug 'plasticboy/vim-markdown'
+" ack in vim
+Plug 'mileszs/ack.vim'
 
 " Initialize plugin system
 call plug#end()
