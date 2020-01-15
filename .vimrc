@@ -78,6 +78,9 @@ Plug 'majutsushi/tagbar'
 " ack in vim
 Plug 'mileszs/ack.vim'
 
+" typescript?
+"Plug 'Quramy/tsuquyomi'
+
 " Initialize plugin system
 call plug#end()
 
@@ -202,10 +205,11 @@ nmap <silent> <leader>j :ALENext<cr>
 nmap <silent> <leader>k :ALEPrevious<cr>
 nnoremap <silent> <leader>e :ALEDetail<CR>
 
+"let g:ale_typescript_tsserver_executable =  './node
 " Force ale to use eslint
 let g:ale_linters = {
     \ 'javascript': ['eslint'],
-    \ 'typescript': ['tslint', 'tsserver'],
+    \ 'typescript': ['tsserver', 'eslint'],
     \}
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 0
@@ -219,6 +223,7 @@ let g:ale_echo_msg_format = '%linter% says %s'
 let g:ale_fixers = {
     \   '*': ['remove_trailing_lines', 'trim_whitespace'],
     \   'javascript': ['eslint'],
+    \   'typescript': ['prettier', 'eslint'],
     \   'markdown': [],
     \   'elm': ['elm-format'],
     \}
