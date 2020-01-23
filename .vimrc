@@ -222,7 +222,7 @@ let g:ale_open_list = 0
 let g:ale_echo_msg_format = '%linter% says %s'
 let g:ale_fixers = {
     \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-    \   'javascript': ['eslint'],
+    \   'javascript': ['prettier', 'eslint'],
     \   'typescript': ['prettier', 'eslint'],
     \   'markdown': [],
     \   'elm': ['elm-format'],
