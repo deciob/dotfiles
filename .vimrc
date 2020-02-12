@@ -211,6 +211,7 @@ nnoremap <silent> <leader>e :ALEDetail<CR>
 let g:ale_linters = {
     \ 'javascript': ['eslint'],
     \ 'typescript': ['tsserver', 'eslint'],
+    \ 'json': ['jsonlint'],
     \}
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 0
@@ -225,6 +226,7 @@ let g:ale_fixers = {
     \   '*': ['remove_trailing_lines', 'trim_whitespace'],
     \   'javascript': ['prettier', 'eslint'],
     \   'typescript': ['prettier', 'eslint'],
+    \   'json': ['fixjson', 'prettier'],
     \   'markdown': [],
     \   'elm': ['elm-format'],
     \}
