@@ -120,12 +120,13 @@ nnoremap <leader><space> :nohlsearch<CR>
 
 " map nerdtree to F2
 map <F2> :NERDTreeToggle<CR>
+map <F3> :NERDTreeFind<CR>
 
 " map bufexplorer to F12
 nnoremap <F12> :BufExplorer<CR>
 
 " toggle tagbar
-nmap <F8> :TagbarToggle<CR>
+nmap <F4> :TagbarToggle<CR>
 " and open on the left
 let g:tagbar_left = 1
 " and configure
