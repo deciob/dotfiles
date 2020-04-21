@@ -1,5 +1,4 @@
-" Specify a directory for plugins
-" - Avoid using standard Vim directory names like 'plugin'
+" Specify a directory for plugins " - Avoid using standard Vim directory names like 'plugin'
 " - :PlugInstall to install plugins
 call plug#begin('~/.vim/plugged')
 
@@ -77,6 +76,9 @@ Plug 'majutsushi/tagbar'
 
 " ack in vim
 Plug 'mileszs/ack.vim'
+
+" Coc - Use release branch (Recommend)
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " typescript?
 "Plug 'Quramy/tsuquyomi'
@@ -200,40 +202,6 @@ set pastetoggle=<F5>
 " use jsx extent on js files
 let g:jsx_ext_required = 0
 
-"""""""""""""""""""""""""""""""""""""""""""""""""" ale
-" ale mappings
-nmap <silent> <leader>j :ALENext<cr>
-nmap <silent> <leader>k :ALEPrevious<cr>
-nnoremap <silent> <leader>e :ALEDetail<CR>
-
-"let g:ale_typescript_tsserver_executable =  './node
-" Force ale to use eslint
-let g:ale_linters = {
-    \ 'javascript': ['eslint'],
-    \ 'typescript': ['tsserver', 'eslint'],
-    \ 'json': ['jsonlint'],
-    \}
-let g:ale_set_loclist = 0
-let g:ale_set_quickfix = 0
-let g:ale_open_list = 0
-
-" To not open window on save:
-"let g:ale_open_list = 'on_save'
-
-" Show the used linter:
-let g:ale_echo_msg_format = '%linter% says %s'
-let g:ale_fixers = {
-    \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-    \   'javascript': ['prettier', 'eslint'],
-    \   'typescript': ['prettier', 'eslint'],
-    \   'json': ['fixjson', 'prettier'],
-    \   'markdown': [],
-    \   'elm': ['elm-format'],
-    \}
-let g:ale_fix_on_save = 1
-let g:ale_use_global_executables = 1
-
-"""""""""""""""""""""""""""""""""""""""""""""""""" ale
 
 " typescript
 "let g:typescript_indent_disable = 1
@@ -271,4 +239,6 @@ set hidden
 " let g:prettier#autoformat = 0
 " autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
-source ~/.vim/elm.vim
+source ~/.vim/vim-config/elm.vim
+source ~/.vim/vim-config/ale.vim
+"source ~/.vim/vim-config/coc.vim
