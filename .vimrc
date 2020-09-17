@@ -91,7 +91,9 @@ call plug#end()
 """"""""
 
 colorscheme solarized
+set background=light
 syntax enable           " enable syntax processing
+"let g:solarized_termcolors=256
 
 filetype plugin indent on
 set tabstop=4           " number of visual spaces per TAB
