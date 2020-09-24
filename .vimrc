@@ -68,7 +68,7 @@ Plug 't9md/vim-quickhl'
 Plug 'andys8/vim-elm-syntax'
 
 " Elm analyze
-Plug 'antew/vim-elm-analyse'
+"Plug 'antew/vim-elm-analyse'
 
 " Tagbar is a Vim plugin that provides an easy way to browse the tags
 " of the current file and get an overview of its structure.
@@ -92,6 +92,9 @@ call plug#end()
 
 colorscheme solarized
 syntax enable           " enable syntax processing
+
+hi clear SpellBad
+hi SpellBad cterm=underline
 
 filetype plugin indent on
 set tabstop=4           " number of visual spaces per TAB
