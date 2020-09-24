@@ -91,7 +91,9 @@ call plug#end()
 """"""""
 
 colorscheme solarized
+set background=light
 syntax enable           " enable syntax processing
+"let g:solarized_termcolors=256
 
 hi clear SpellBad
 hi SpellBad cterm=underline
