@@ -14,6 +14,9 @@ Plug 'scrooloose/nerdtree'
 Plug '~/app/fzf', { 'dir': '~/.fzf' }
 Plug 'junegunn/fzf.vim'
 
+" Fugitive
+Plug 'tpope/vim-fugitive'
+
 " Indent markers
 Plug 'Yggdroot/indentLine'
 
@@ -95,8 +98,8 @@ set background=light
 syntax enable           " enable syntax processing
 "let g:solarized_termcolors=256
 
-hi clear SpellBad
-hi SpellBad cterm=underline
+"hi clear SpellBad
+"hi SpellBad cterm=underline
 
 filetype plugin indent on
 set tabstop=4           " number of visual spaces per TAB
