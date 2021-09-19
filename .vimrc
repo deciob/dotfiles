@@ -80,6 +80,10 @@ Plug 'majutsushi/tagbar'
 " ack in vim
 Plug 'mileszs/ack.vim'
 
+
+" This plugin provides a start screen for Vim and Neovim.
+Plug 'mhinz/vim-startify'
+
 " Coc - Use release branch (Recommend)
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
