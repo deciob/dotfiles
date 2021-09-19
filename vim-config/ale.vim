@@ -11,6 +11,8 @@ let g:ale_linters = {
     \ 'typescript': ['tsserver', 'eslint'],
     \ 'json': ['jsonlint'],
     \ 'elm': ['make'],
+    \ 'scss': ['stylelint'],
+    \ 'css': ['stylelint'],
     \}
 "
 let g:ale_set_loclist = 0
@@ -29,6 +31,9 @@ let g:ale_fixers = {
     \   'json': ['fixjson', 'prettier'],
     \   'markdown': [],
     \   'elm': ['elm-format'],
+    \   'scss': ['prettier', 'stylelint'],
+    \   'css': ['prettier', 'stylelint'],
+    \   'html': ['prettier'],
     \}
 let g:ale_fix_on_save = 1
 "let g:ale_use_global_executables = 1
