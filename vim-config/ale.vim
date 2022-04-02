@@ -10,7 +10,7 @@ let g:ale_linters = {
     \ 'javascript': ['eslint'],
     \ 'typescript': ['tsserver', 'eslint'],
     \ 'json': ['jsonlint'],
-    \ 'elm': ['make'],
+    \ 'elm': ['make', 'elm_ls'],
     \ 'scss': ['stylelint'],
     \ 'css': ['stylelint'],
     \}
@@ -46,5 +46,14 @@ let g:ale_echo_cursor = 0
 "appearance
 let g:ale_sign_error = '●'
 let g:ale_sign_warning = '.'
+
+"language server
+let g:ale_elm_ls_use_global = 1
+let g:ale_elm_ls_executable = "elm-language-server"
+let g:ale_elm_ls_elm_path = "elm"
+let g:ale_elm_ls_elm_format_path = "elm-format"
+let g:ale_elm_ls_elm_test_path = "elm-test"
+
+map <F5> :ALEGoToDefinition<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""" ale

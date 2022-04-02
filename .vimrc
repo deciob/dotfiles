@@ -81,9 +81,6 @@ Plug 'majutsushi/tagbar'
 Plug 'mileszs/ack.vim'
 
 
-" This plugin provides a start screen for Vim and Neovim.
-Plug 'mhinz/vim-startify'
-
 " Coc - Use release branch (Recommend)
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -100,7 +97,7 @@ call plug#end()
 colorscheme solarized
 set background=light
 syntax enable           " enable syntax processing
-"let g:solarized_termcolors=256
+let g:solarized_termcolors=256
 
 "hi clear SpellBad
 "hi SpellBad cterm=underline
