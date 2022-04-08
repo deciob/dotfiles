@@ -1,0 +1,7 @@
+:reg        : list the register
+:jump       : list the jumplist
+:so %       : source the current file
+
+
+
+<C>^ : back/forth between two last opened files
