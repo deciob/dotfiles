@@ -5,3 +5,8 @@
 
 
 <C>^ : back/forth between two last opened files
+
+
+:copen      : open the quick list 
+:lopen      : open the location list
+:cdo        : aplly a command to the lists -> search/repleace for example
