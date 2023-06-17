@@ -30,7 +30,7 @@ Plug 'jlanzarotta/bufexplorer'
 Plug 'pangloss/vim-javascript'
 
 " React
-Plug 'mxw/vim-jsx'
+Plug 'maxmellon/vim-jsx-pretty'
 
 " Expand abbreviations...
 "Plug 'mattn/emmet-vim'
