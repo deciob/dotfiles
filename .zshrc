@@ -141,3 +141,6 @@ setxkbmap -option caps:escape
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+#setup nvim
+alias nvim="$HOME/app/nvim.appimage"
