@@ -9,6 +9,8 @@ nnoremap <silent> <leader>e :ALEDetail<CR>
 let g:ale_linters = {
     \ 'javascript': ['eslint'],
     \ 'typescript': ['tsserver', 'eslint'],
+    \ 'tsx': ['tsserver', 'eslint'],
+    \ 'jsx': ['eslint'],
     \ 'json': ['jsonlint'],
     \ 'elm': ['make'],
     \ 'scss': ['stylelint'],
@@ -30,7 +32,8 @@ let g:ale_echo_msg_format = '%linter% says %s'
 let g:ale_fixers = {
     \   '*': ['remove_trailing_lines', 'trim_whitespace'],
     \   'javascript': ['prettier', 'eslint'],
-    \   'typescript': ['prettier', 'eslint'],
+    \   'typescript': ['prettier'],
+    \   'typescriptreact': ['prettier'],
     \   'json': ['fixjson', 'prettier'],
     \   'markdown': [],
     \   'elm': ['elm-format'],
