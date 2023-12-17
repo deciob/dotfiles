@@ -73,6 +73,7 @@ ZSH_THEME="nebirhos"
 plugins=(
   git
   yarn
+  kubectl
 )
 
 source $ZSH/oh-my-zsh.sh
