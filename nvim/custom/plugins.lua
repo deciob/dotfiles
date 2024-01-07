@@ -57,6 +57,11 @@ local plugins = {
     end,
   },
 
+  {
+    "hashivim/vim-terraform",
+    ft = "terraform",
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
