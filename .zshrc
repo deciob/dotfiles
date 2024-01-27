@@ -74,6 +74,7 @@ plugins=(
   git
   yarn
   kubectl
+  terraform
 )
 
 source $ZSH/oh-my-zsh.sh
