@@ -1,11 +1,24 @@
 local g = vim.g
+local keymap = vim.api.nvim_set_keymap
 
 g.neoformat_try_node_exe = 1
 
 vim.o.scrolloff = 5
 
+-- Modes
+--   normal_mode = "n",
+--   insert_mode = "i",
+--   visual_mode = "v",
+--   visual_block_mode = "x",
+--   term_mode = "t",
+--   command_mode = "c",
+
 -- make copy&paste more sane!
-vim.api.nvim_set_keymap("v", "p", '"_dP', { noremap = true, silent = true })
+keymap("v", "p", '"_dP', { noremap = true, silent = true })
+
+-- fast scroll
+keymap("n", "<C-e>", "2<C-e>", { noremap = true, silent = true })
+keymap("n", "<C-y>", "2<C-y>", { noremap = true, silent = true })
 
 -- Set up Prettier autocmd
 vim.cmd([[
