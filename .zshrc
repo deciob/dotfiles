@@ -154,3 +154,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# Install gems locally
+export GEM_HOME=$(ruby -e 'puts Gem.user_dir')
