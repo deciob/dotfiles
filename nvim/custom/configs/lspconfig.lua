@@ -15,5 +15,8 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+-- elm
+lspconfig.elmls.setup{}
+
 --vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 

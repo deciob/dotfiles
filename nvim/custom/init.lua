@@ -38,5 +38,9 @@ vim.cmd([[autocmd BufRead,BufNewFile *.tfstate,*.tfstate.backup set filetype=jso
 vim.cmd([[let g:terraform_fmt_on_save=1]])
 vim.cmd([[let g:terraform_align=1]])
 
+-- Format with the registred language server
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
+
+
 
 
