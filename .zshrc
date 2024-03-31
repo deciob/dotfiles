@@ -157,3 +157,6 @@ esac
 
 # Install gems locally
 export GEM_HOME=$(ruby -e 'puts Gem.user_dir')
+
+# lua-language-server
+alias lua-language-server="$HOME/app/lua-language-server-3.7.4-linux-x64/bin/lua-language-server"
