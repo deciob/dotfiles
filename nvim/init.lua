@@ -26,6 +26,9 @@ require("config.nvim-cmp")
 require("config.conform")
 require("config.telescope")
 require("config.neo-tree")
+require("config.gitblame")
+require("config.lualine")
+require("config.toggleterm")
 
 -- formatting
 vim.api.nvim_create_autocmd("BufWritePre", {
@@ -37,4 +40,4 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 
 -- colorscheme
 vim.o.background = "dark"
-vim.cmd("colorscheme everforest")
+vim.cmd("colorscheme gruvbox")

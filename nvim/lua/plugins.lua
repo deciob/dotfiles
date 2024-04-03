@@ -2,6 +2,7 @@ return {
     -- colorschemes
     { 'kepano/flexoki-neovim',            name = 'flexoki' },
     { 'neanias/everforest-nvim' },
+    { "ellisonleao/gruvbox.nvim",         priority = 1000,                        config = true, opts = {} },
 
     -- lsp
     { 'williamboman/mason.nvim' },
@@ -44,7 +45,20 @@ return {
     },
 
     -- git
-    { "sindrets/diffview.nvim" }
+    { "sindrets/diffview.nvim" },
+    { "f-person/git-blame.nvim" },
 
+    -- statusline
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
+    },
+
+    -- terminal
+    {
+        'akinsho/toggleterm.nvim',
+        version = "*",
+        config = true
+    },
 
 }
