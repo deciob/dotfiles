@@ -145,13 +145,12 @@ setxkbmap -option caps:escape
 #eval "$(pyenv init -)"
 
 #setup nvim
-if [[ -f $HOME/app/nvim.appimage ]]
-then
-  # I am on linux
-  alias nvim="$HOME/app/nvim.appimage"
+if [[ -f $HOME/app/nvim.appimage ]]; then
+# I am on linux
+alias nvim="$HOME/app/nvim.appimage"
 else
-  # I am on my macbook
-  export PATH=/opt/homebrew/bin:$PATH
+# I am on my macbook
+export PATH=/opt/homebrew/bin:$PATH
 fi
 
 # pnpm
