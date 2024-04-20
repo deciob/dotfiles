@@ -23,7 +23,8 @@ require("config.toggleterm")
 
 -- colorscheme
 vim.o.background = "dark"
-vim.cmd("colorscheme gruvbox")
+--vim.cmd("colorscheme gruvbox")
+require('onedark').load()
 
 -- formatting
 vim.api.nvim_create_autocmd("BufWritePre", {

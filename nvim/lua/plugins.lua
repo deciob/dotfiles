@@ -3,6 +3,7 @@ return {
     { 'kepano/flexoki-neovim',            name = 'flexoki' },
     { 'neanias/everforest-nvim' },
     { "ellisonleao/gruvbox.nvim",         priority = 1000,                        config = true, opts = {} },
+    { "navarasu/onedark.nvim" },
 
     -- lsp
     { 'williamboman/mason.nvim' },
