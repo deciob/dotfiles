@@ -27,26 +27,20 @@ require('mason-lspconfig').setup({
     ensure_installed = servers,
 })
 
---require('mason-tool-installer').setup({
---
---    -- a list of all tools you want to ensure are installed upon
---    -- start
---    ensure_installed = {
---        'black',
---        'debugpy',
---        'flake8',
---        'isort',
---        'mypy',
---        'pylint',
---    }
---})
 
 -- Setup language servers.
 
 local lspconfig = require('lspconfig')
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 for _, lsp in ipairs(servers) do
-    lspconfig[lsp].setup {}
+    if lsp == 'cssls' then
+        lspconfig.cssls.setup({
+            capabilities = capabilities,
+        })
+    elseif true then
+        lspconfig[lsp].setup {}
+    end
 end
 
 -- In case you need to pass some specific settings, here is an example:
