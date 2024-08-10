@@ -24,3 +24,19 @@ require("config.toggleterm")
 -- colorscheme
 vim.o.background = "dark"
 vim.cmd("colorscheme gruvbox")
+
+-- Set up custom syntax highlighting for code blocks
+vim.cmd([[
+  function! VimwikiHighlight()
+    syntax include @Python syntax/python.vim
+    syntax region pythonCode start="{{{python" end="}}}" contains=@Python
+    syntax include @Lua syntax/lua.vim
+    syntax region luaCode start="{{{lua" end="}}}" contains=@Lua
+    syntax include @Vim syntax/vim.vim
+    syntax region vimCode start="{{{vim" end="}}}" contains=@Vim
+    syntax include @CSS syntax/css.vim
+    syntax region cssCode start="{{{css" end="}}}" contains=@CSS
+  endfunction
+
+  autocmd FileType vimwiki call VimwikiHighlight()
+]])

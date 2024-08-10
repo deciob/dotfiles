@@ -13,9 +13,9 @@ return {
     -- autocomplete
     { 'hrsh7th/nvim-cmp',                 config = [[require('config.nvim-cmp')]] },
     { 'hrsh7th/cmp-nvim-lsp',             after = 'nvim-cmp' },
-    { 'hrsh7th/cmp-buffer',               after = 'nvim-cmp' },         -- buffer auto-completion
-    { 'hrsh7th/cmp-path',                 after = 'nvim-cmp' },         -- path auto-completion
-    { 'hrsh7th/cmp-cmdline',              after = 'nvim-cmp' },         -- cmdline auto-completion
+    { 'hrsh7th/cmp-buffer',               after = 'nvim-cmp' }, -- buffer auto-completion
+    { 'hrsh7th/cmp-path',                 after = 'nvim-cmp' }, -- path auto-completion
+    { 'hrsh7th/cmp-cmdline',              after = 'nvim-cmp' }, -- cmdline auto-completion
     { 'L3MON4D3/LuaSnip',                 dependencies = { "rafamadriz/friendly-snippets" }, },
     { 'saadparwaiz1/cmp_luasnip' },
 
@@ -62,16 +62,31 @@ return {
         config = true
     },
 
-    -- notes
-    --{
-    --    'lervag/wiki.vim',
-    --    config = function()
-    --        vim.g.wiki_root = '~/wiki'        -- Set your wiki root directory
-    --        vim.g.wiki_filetypes = { 'md' }   -- Set file types
-    --        vim.g.wiki_link_extension = '.md' -- Set file extension for links
-    --    end,
-    --},
+    -- better highlighting with treesitter (?)
     --
+    -- This will need the required development tool libraries installed on your machine
+    --
+    -- For linux-ubuntu you will need:
+    -- sudo apt-get install build-essential
+    -- sudo apt-get install python3-dev
+    --
+    -- For Mac (not tested):
+    -- xcode-select --install
+    -- brew install python
+    {
+        'nvim-treesitter/nvim-treesitter',
+        build = ":TSUpdate",
+        config = function()
+            require("nvim-treesitter.configs").setup({
+                ensure_installed = { "lua", "vim", "python", "css", "javascript", "elm" },
+                highlight = {
+                    enable = true,
+                },
+            })
+        end
+    },
+
+    -- notes
     {
         "vimwiki/vimwiki",
         init = function()
@@ -82,6 +97,8 @@ return {
                     ext = '.wiki',
                 },
             }
+            -- Enable syntax highlighting in code blocks
+            vim.g.vimwiki_highlightcodeblocks = 1
         end,
     },
 
