@@ -1,11 +1,12 @@
 require("conform").setup({
-      formatters_by_ft = {
+    formatters_by_ft = {
         javascript = { "prettier" },
         typescript = { "prettier" },
         javascriptreact = { "prettier" },
         typescriptreact = { "prettier" },
         svelte = { "prettier" },
         css = { "prettier" },
+        scss = { "prettier" },
         html = { "prettier" },
         json = { "prettier" },
         yaml = { "prettier" },
@@ -13,14 +14,9 @@ require("conform").setup({
         graphql = { "prettier" },
         lua = { "stylua" },
         --python = { "isort", "black" },
-      },
+    },
 
-
-
-      format_on_save = {
+    format_after_save = {
         lsp_fallback = true,
-        async = true,
-        timeout_ms = 1500,
-      },
+    },
 })
-

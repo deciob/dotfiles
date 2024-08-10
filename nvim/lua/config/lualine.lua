@@ -1,6 +1,6 @@
 -- Lua
 
-require('lualine').setup {}
+--require('lualine').setup {}
 
 -- Possible lualine-giblame setup
 --vim.g.gitblame_display_virtual_text = 0 -- Disable virtual text
@@ -13,3 +13,15 @@ require('lualine').setup {}
 --        }
 --    }
 --}
+--
+--
+
+local default = require('lualine').get_config()
+
+local custom = {
+    sections = {
+        lualine_c = { { 'filename', path = 1 } },
+    },
+}
+
+require('lualine').setup(vim.tbl_deep_extend('force', default, custom))

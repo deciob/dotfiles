@@ -11,7 +11,7 @@ require("lazy").setup("plugins")
 -- lsp
 require("lsp")
 
--- plugin specific config
+-- initialise plugin specific config
 require("config.lsp")
 require("config.nvim-cmp")
 require("config.conform")
@@ -23,13 +23,4 @@ require("config.toggleterm")
 
 -- colorscheme
 vim.o.background = "dark"
---vim.cmd("colorscheme gruvbox")
-require('onedark').load()
-
--- formatting
-vim.api.nvim_create_autocmd("BufWritePre", {
-    pattern = "*",
-    callback = function(args)
-        require("conform").format({ bufnr = args.buf })
-    end,
-})
+vim.cmd("colorscheme gruvbox")
