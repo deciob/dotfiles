@@ -36,6 +36,8 @@ vim.cmd([[
     syntax region vimCode start="{{{vim" end="}}}" contains=@Vim
     syntax include @CSS syntax/css.vim
     syntax region cssCode start="{{{css" end="}}}" contains=@CSS
+    syntax include @HTML syntax/html.vim
+    syntax region htmlCode start="{{{html" end="}}}" contains=@HTML
   endfunction
 
   autocmd FileType vimwiki call VimwikiHighlight()
