@@ -16,6 +16,8 @@ return {
     { 'hrsh7th/cmp-buffer',               after = 'nvim-cmp' }, -- buffer auto-completion
     { 'hrsh7th/cmp-path',                 after = 'nvim-cmp' }, -- path auto-completion
     { 'hrsh7th/cmp-cmdline',              after = 'nvim-cmp' }, -- cmdline auto-completion
+
+    -- snippets
     { 'L3MON4D3/LuaSnip',                 dependencies = { "rafamadriz/friendly-snippets" }, },
     { 'saadparwaiz1/cmp_luasnip' },
 
@@ -102,4 +104,42 @@ return {
         end,
     },
 
+    -- comment out
+    {
+        'numToStr/Comment.nvim',
+        opts = {
+            --toggler = {
+            --    ---Line-comment toggle keymap
+            --    line = '<leader><Esc>',
+            --    ---Block-comment toggle keymap
+            --    block = '<leader>bc',
+            --},
+            -- add any more options here
+        }
+    },
+
+    -- CSS coloring
+    { 'NvChad/nvim-colorizer.lua' },
+
+    -- surround
+    {
+        "kylechui/nvim-surround",
+        version = "*", -- Use for stability; omit to use `main` branch for the latest features
+        event = "VeryLazy",
+        config = function()
+            require("nvim-surround").setup({
+                -- Configuration here, or leave empty to use defaults
+            })
+        end
+    }
+
+    -- CSS & HTML related
+    --{ 'mattn/emmet-vim' },
+    --{
+    --    'windwp/nvim-autopairs',
+    --    event = "InsertEnter",
+    --    config = true
+    --    -- use opts = {} for passing setup options
+    --    -- this is equivalent to setup({}) function
+    --}
 }

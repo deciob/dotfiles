@@ -20,6 +20,7 @@ require("config.neo-tree")
 require("config.gitblame")
 require("config.lualine")
 require("config.toggleterm")
+require("config.colorizer")
 
 -- colorscheme
 vim.o.background = "dark"
