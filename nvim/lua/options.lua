@@ -83,6 +83,11 @@ vim.api.nvim_create_autocmd("FileType", {
     pattern = "python",
     callback = function()
         vim.opt_local.colorcolumn = "80" -- Highlight column 80 for PEP 8 compliance
-        vim.opt_local.textwidth = 79 -- Set text width to 79 for PEP 8 compliance
+        vim.opt_local.textwidth = 79     -- Set text width to 79 for PEP 8 compliance
     end,
 })
+
+-- Command aliases
+-- vim.api.nvim_create_user_command('AliasName', 'OriginalCommand', {})
+
+vim.api.nvim_create_user_command('Spch', 'setlocal spell spelllang=en_gb', {})
