@@ -166,3 +166,11 @@ esac
 
 # lua-language-server
 alias lua-language-server="$HOME/app/lua-language-server-3.7.4-linux-x64/bin/lua-language-server"
+
+# the chpwd hook gets called everytime the current working directory changes.
+function chpwd() {
+  # if we have a venv, activate it!
+  if [[ -d .venv ]] ; then
+    source .venv/bin/activate
+  fi
+}
