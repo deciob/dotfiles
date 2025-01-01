@@ -14,7 +14,7 @@ local servers = {
     "html",
     "cssls",
     "elmls",
-    "tsserver",
+    "ts_ls",
     "clangd",
     "terraformls",
     "tflint",
