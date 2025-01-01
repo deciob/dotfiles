@@ -20,6 +20,7 @@ local servers = {
     "tflint",
     "jsonls",
     "pyright",
+    "astro"
 }
 
 require('mason-lspconfig').setup({
