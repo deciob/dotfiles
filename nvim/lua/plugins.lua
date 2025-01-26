@@ -24,7 +24,7 @@ return {
     -- formatters
     {
         "prettier/vim-prettier",
-        ft = { "javascript", "typescript", "json", "css", "scss", "html", "markdown", "typescriptreact", "yaml" },
+        ft = { "astro", "javascript", "typescript", "json", "css", "scss", "html", "markdown", "typescriptreact", "yaml" },
     },
     {
         'stevearc/conform.nvim',
