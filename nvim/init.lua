@@ -21,6 +21,7 @@ require("config.gitblame")
 require("config.lualine")
 require("config.toggleterm")
 require("config.colorizer")
+require("config.codeium").setup()
 
 -- colorscheme
 vim.o.background = "dark"

@@ -152,7 +152,7 @@ return {
                 -- Configuration here, or leave empty to use defaults
             })
         end
-    }
+    },
 
     -- CSS & HTML related
     --{ 'mattn/emmet-vim' },
@@ -163,4 +163,11 @@ return {
     --    -- use opts = {} for passing setup options
     --    -- this is equivalent to setup({}) function
     --}
+
+    -- AI
+    {
+	  'Exafunction/codeium.vim',
+	  event = 'BufEnter'
+	}
+
 }
