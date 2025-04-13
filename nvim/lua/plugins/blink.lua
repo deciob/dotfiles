@@ -25,7 +25,7 @@ return {
 		-- C-k: Toggle signature help (if signature.enabled = true)
 		--
 		-- See :h blink-cmp-config-keymap for defining your own keymap
-		keymap = { preset = "default" },
+		keymap = { preset = "default", ["<CR>"] = { "accept", "fallback" } },
 
 		appearance = {
 			-- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
@@ -34,7 +34,7 @@ return {
 		},
 
 		-- (Default) Only show the documentation popup when manually triggered
-		completion = { documentation = { auto_show = true } },
+		completion = { documentation = { auto_show = true }, ghost_text = { enabled = true } },
 
 		-- Blink supports signature help, automatically triggered when typing trigger characters, defined by the LSP, such as ( for lua.
 		-- The menu will be updated when pressing a retrigger character, such as ,.
