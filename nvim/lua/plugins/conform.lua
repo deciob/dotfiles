@@ -1,3 +1,5 @@
+--Lightweight yet powerful formatter plugin for Neovim
+
 local prettier = { "prettierd", "prettier", stop_after_first = true }
 return {
 	"stevearc/conform.nvim",
