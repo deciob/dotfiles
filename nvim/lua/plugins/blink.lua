@@ -1,3 +1,5 @@
+-- blink.cmp is a completion plugin with support for LSPs and external sources that updates on every keystroke with minimal overhead
+
 return {
 	"saghen/blink.cmp",
 	-- optional: provides snippets for the snippet source

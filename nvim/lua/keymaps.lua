@@ -50,5 +50,5 @@ end, { desc = "Open diagnostics in float window" })
 
 -- Formatting
 vim.keymap.set("n", "<leader>cf", function()
-	require("conform").format({lsp_format="fallback"})
+	require("conform").format({ lsp_format = "fallback" })
 end, { desc = "Format code" })
