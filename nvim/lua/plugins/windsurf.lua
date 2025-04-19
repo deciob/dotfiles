@@ -29,5 +29,7 @@ return {
 			-- keymap("i", "<C-x>", function() return vim.fn["codeium#Clear"]() end,
 			--     { expr = true, desc = "Codeium: Clear suggestions" })
 		end
+
+		setup()
 	end,
 }
