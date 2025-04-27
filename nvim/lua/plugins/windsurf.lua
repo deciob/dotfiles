@@ -6,8 +6,8 @@ return {
 	config = function()
 		vim.g.codeium_enabled = false
 		-- Map <leader>-llm to toggle Codeium
-		vim.keymap.set("n", "<C-l>", ":Codeium Toggle<CR>", { noremap = true, silent = false })
-		vim.keymap.set("i", "<C-a>", function()
+		vim.keymap.set("n", "<F12>", ":Codeium Toggle<CR>", { noremap = true, silent = false })
+		vim.keymap.set("i", "<leader>a", function()
 			return vim.fn["codeium#Accept"]()
 		end, { expr = true, silent = true })
 		vim.keymap.set("i", "<C-;>", function()
