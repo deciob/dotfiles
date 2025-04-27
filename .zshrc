@@ -46,7 +46,7 @@ source $ZSH/oh-my-zsh.sh
 
 #Setup nvim
 # I am on my macbook
-export PATH=/opt/homebrew/bin:$PATH
+alias nvim=~/Applications/nvim-macos-x86_64/bin/nvim
 
 # Install gems locally
 #export GEM_HOME=$(ruby -e 'puts Gem.user_dir')
