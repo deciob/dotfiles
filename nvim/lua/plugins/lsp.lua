@@ -236,6 +236,7 @@ return {
 			elmls = {},
 			marksman = {},
 			html = {},
+			harper_ls = {},
 		}
 
 		-- Ensure the servers and tools above are installed

@@ -41,7 +41,7 @@ vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Oil
-vim.keymap.set("n", "-", "<cmd>Oil --float<CR>", opts)
+vim.keymap.set("n", "<F2>", "<cmd>Oil --float<CR>", opts)
 
 -- Diagnostics
 vim.keymap.set("n", "gl", function()
