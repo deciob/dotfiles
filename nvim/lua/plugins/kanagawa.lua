@@ -15,8 +15,9 @@ return {
 						["@markup.quote.markdown"] = { link = "Error" }, -- > blockcode
 					}
 				end,
+				theme = "wave",
 			})
-			vim.cmd("colorscheme kanagawa")
+			vim.cmd("colorscheme kanagawa-lotus")
 		end,
 		build = function()
 			vim.cmd("KanagawaCompile")

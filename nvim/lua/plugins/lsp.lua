@@ -237,6 +237,7 @@ return {
 			marksman = {},
 			html = {},
 			harper_ls = {},
+			rust_analyzer = {},
 		}
 
 		-- Ensure the servers and tools above are installed
