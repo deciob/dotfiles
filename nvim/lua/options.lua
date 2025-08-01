@@ -49,5 +49,5 @@ vim.api.nvim_create_autocmd("FileType", {
 
 vim.api.nvim_create_user_command("Spch", "setlocal spell spelllang=en_gb", {})
 
---	avoid the leader to be annoying?
-vim.opt.timeoutlen = 100 -- or 200, experiment with what feels right
+--	Avoid the leader to be annoying?
+vim.opt.timeoutlen = 100
