@@ -236,7 +236,18 @@ return {
 			elmls = {},
 			marksman = {},
 			html = {},
-			harper_ls = {},
+			harper_ls = {
+				settings = {
+					["harper-ls"] = {
+						-- only check comments
+						diagnostics = {
+							comments = true,
+							strings = false,
+							code = false,
+						},
+					},
+				},
+			},
 			rust_analyzer = {},
 		}
 
