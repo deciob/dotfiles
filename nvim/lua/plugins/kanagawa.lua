@@ -17,7 +17,8 @@ return {
 				end,
 				theme = "wave",
 			})
-			vim.cmd("colorscheme kanagawa-lotus")
+			--vim.cmd("colorscheme kanagawa-lotus") --light
+			vim.cmd("colorscheme kanagawa-dragon") --dark
 		end,
 		build = function()
 			vim.cmd("KanagawaCompile")

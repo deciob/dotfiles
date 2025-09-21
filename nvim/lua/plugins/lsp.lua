@@ -242,7 +242,7 @@ return {
 						-- only check comments
 						diagnostics = {
 							comments = true,
-							strings = false,
+							strings = true,
 							code = false,
 						},
 					},
